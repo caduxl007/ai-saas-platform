@@ -14,6 +14,7 @@ import {
 import { Montserrat } from 'next/font/google'
 import Image from 'next/image'
 import Link from 'next/link'
+import { FreeCounter } from './free-counter'
 
 const montserrat = Montserrat({
   weight: '600',
@@ -64,7 +65,11 @@ const routes = [
   },
 ]
 
-export function Sidebar() {
+interface SidebarProps {
+  apiLimitCount: number
+}
+
+export function Sidebar({ apiLimitCount = 0 }: SidebarProps) {
   const pathname = usePathname()
 
   return (
@@ -100,6 +105,8 @@ export function Sidebar() {
           ))}
         </div>
       </div>
+
+      <FreeCounter apiLimitCount={apiLimitCount} />
     </div>
   )
 }
