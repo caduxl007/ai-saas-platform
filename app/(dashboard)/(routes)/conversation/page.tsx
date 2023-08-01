@@ -18,10 +18,12 @@ import { Loader } from '@/components/Loader'
 import { cn } from '@/lib/utils'
 import { UserAvatar } from '@/components/user-avatar'
 import { BotAvatar } from '@/components/bot-avatar'
+import { useProModal } from '@/hooks/use-pro-modal'
 
 export default function ConversationPage() {
   const router = useRouter()
   const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([])
+  const proModal = useProModal()
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -47,8 +49,10 @@ export default function ConversationPage() {
 
       setMessages((current) => [...current, userMessage, response.data])
       form.reset()
-    } catch (error) {
-      // TODO: Open Pro Modal
+    } catch (error: any) {
+      if (error?.response?.status === 403) {
+        proModal.onOpen()
+      }
 
       console.log(error)
     } finally {
