@@ -18,6 +18,7 @@ import { Card } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
 import { useState } from 'react'
 import axios from 'axios'
+import toast from 'react-hot-toast'
 
 export const ProModal = () => {
   const proModal = useProModal()
@@ -30,7 +31,7 @@ export const ProModal = () => {
 
       window.location.href = response.data.url
     } catch (e: any) {
-      console.log(e, 'STRIPE_CLIENT_ERROR')
+      toast.error('Something went wrong')
     } finally {
       setIsLoading(false)
     }
@@ -67,6 +68,7 @@ export const ProModal = () => {
         </DialogHeader>
         <DialogFooter>
           <Button
+            disabled={isLoading}
             onClick={onSubscribe}
             size="lg"
             variant="premium"
