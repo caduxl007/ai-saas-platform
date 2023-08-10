@@ -66,8 +66,8 @@ export default function ImagePage() {
   return (
     <div>
       <Heading
-        title="Image Generation"
-        description="Turn your prompt into a image"
+        title="Geração de Imagem"
+        description="Transforme seu prompt em uma imagem"
         icon={ImageIcon}
         iconColor="text-pink-700"
         bgColor="bg-pink-700/10"
@@ -150,7 +150,7 @@ export default function ImagePage() {
                   </FormItem>
                 )}
               />
-              <Button className="col-span-12 lg:col-span-2">Generate</Button>
+              <Button className="col-span-12 lg:col-span-2">Gerar</Button>
             </form>
           </Form>
         </div>
@@ -162,7 +162,7 @@ export default function ImagePage() {
             </div>
           )}
           {!images.length && !isLoading && (
-            <Empty label="No images generated" />
+            <Empty label="Nenhuma imagem gerada" />
           )}
 
           <div className="xl-grid-cols-4 mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">

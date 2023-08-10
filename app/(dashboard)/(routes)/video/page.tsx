@@ -53,8 +53,8 @@ export default function VideoPage() {
   return (
     <div>
       <Heading
-        title="Video Generation"
-        description="Turn your prompt into video"
+        title="Geração de Video"
+        description="Transforme seu prompt em um video"
         icon={VideoIcon}
         iconColor="text-orange-700"
         bgColor="bg-orange-700/10"
@@ -83,7 +83,7 @@ export default function VideoPage() {
                 )}
               />
 
-              <Button className="col-span-12 lg:col-span-2">Generate</Button>
+              <Button className="col-span-12 lg:col-span-2">Gerar</Button>
             </form>
           </Form>
         </div>
@@ -94,7 +94,7 @@ export default function VideoPage() {
               <Loader />
             </div>
           )}
-          {!video && !isLoading && <Empty label="No video generated" />}
+          {!video && !isLoading && <Empty label="Nenhum video gerado" />}
 
           {video && (
             <video

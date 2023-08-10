@@ -21,7 +21,7 @@ import { BotAvatar } from '@/components/bot-avatar'
 import { useProModal } from '@/hooks/use-pro-modal'
 import toast from 'react-hot-toast'
 
-export default function ConversationPage() {
+export default function ConversaçãoPage() {
   const router = useRouter()
   const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([])
   const proModal = useProModal()
@@ -64,8 +64,8 @@ export default function ConversationPage() {
   return (
     <div>
       <Heading
-        title="Conversation"
-        description="Our most advanced conversation model."
+        title="Conversação"
+        description="Nosso modelo de conversação mais avançado."
         icon={MessageSquare}
         iconColor="text-violet-500"
         bgColor="bg-violet-500/10"
@@ -94,7 +94,7 @@ export default function ConversationPage() {
                 )}
               />
 
-              <Button className="col-span-12 lg:col-span-2">Generate</Button>
+              <Button className="col-span-12 lg:col-span-2">Gerar</Button>
             </form>
           </Form>
         </div>
@@ -106,7 +106,7 @@ export default function ConversationPage() {
             </div>
           )}
           {!messages.length && !isLoading && (
-            <Empty label="No conversation started" />
+            <Empty label="Nenhuma conversa iniciada." />
           )}
 
           <div className="flex flex-col-reverse gap-y-4">

@@ -65,8 +65,8 @@ export default function CodePage() {
   return (
     <div>
       <Heading
-        title="Code Generation"
-        description="Generate code using descriptive text."
+        title="Geração de Código"
+        description="Gere código usando texto descritivo."
         icon={Code}
         iconColor="text-green-500"
         bgColor="bg-green-500/10"
@@ -95,7 +95,7 @@ export default function CodePage() {
                 )}
               />
 
-              <Button className="col-span-12 lg:col-span-2">Generate</Button>
+              <Button className="col-span-12 lg:col-span-2">Gerar</Button>
             </form>
           </Form>
         </div>
@@ -107,7 +107,7 @@ export default function CodePage() {
             </div>
           )}
           {!messages.length && !isLoading && (
-            <Empty label="No conversation started" />
+            <Empty label="Nenhuma conversa iniciada." />
           )}
 
           <div className="flex flex-col-reverse gap-y-4">

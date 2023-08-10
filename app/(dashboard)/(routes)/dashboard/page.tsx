@@ -14,35 +14,35 @@ import { useRouter } from 'next/navigation'
 
 export const tools = [
   {
-    label: 'Conversation',
+    label: 'Conversação',
     icon: MessageSquare,
     href: '/conversation',
     color: 'text-violet-500',
     bgColor: 'bg-violet-500/10',
   },
   {
-    label: 'Music Generation',
+    label: 'Gerador de música',
     icon: Music,
     href: '/music',
     color: 'text-emerald-500',
     bgColor: 'bg-emerald-500/10',
   },
   {
-    label: 'Image Generation',
+    label: 'Geração de Imagem',
     icon: ImageIcon,
     color: 'text-pink-700',
     bgColor: 'bg-pink-700/10',
     href: '/image',
   },
   {
-    label: 'Video Generation',
+    label: 'Geração de Video',
     icon: VideoIcon,
     color: 'text-orange-700',
     bgColor: 'bg-orange-700/10',
     href: '/video',
   },
   {
-    label: 'Code Generation',
+    label: 'Geração de Código',
     icon: Code,
     color: 'text-green-700',
     bgColor: 'bg-green-700/10',
@@ -57,11 +57,11 @@ export default function DashboardPage() {
     <div>
       <div className="mb-8 space-y-4">
         <h2 className="text-center text-2xl font-bold md:text-4xl">
-          Explore the power of AI
+          Explore o poder da IA
         </h2>
 
         <p className="text-center text-sm font-light text-muted-foreground md:text-lg">
-          Chat whit the smartest AI - Experience the power of AI
+          Converse com a IA mais inteligente - Experimente o poder da IA
         </p>
       </div>
 

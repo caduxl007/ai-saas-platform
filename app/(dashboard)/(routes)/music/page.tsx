@@ -53,8 +53,8 @@ export default function MusicPage() {
   return (
     <div>
       <Heading
-        title="Music Generation"
-        description="Turn your prompt into music"
+        title="Gerador de música"
+        description="Transforme seu prompt em uma música"
         icon={Music}
         iconColor="text-emerald-500"
         bgColor="bg-emerald-500/10"
@@ -83,7 +83,7 @@ export default function MusicPage() {
                 )}
               />
 
-              <Button className="col-span-12 lg:col-span-2">Generate</Button>
+              <Button className="col-span-12 lg:col-span-2">Gerar</Button>
             </form>
           </Form>
         </div>
@@ -94,7 +94,7 @@ export default function MusicPage() {
               <Loader />
             </div>
           )}
-          {!music && !isLoading && <Empty label="No music generated" />}
+          {!music && !isLoading && <Empty label="Nenhuma música gerada" />}
 
           {music && (
             <audio controls className="mt-8 w-full">

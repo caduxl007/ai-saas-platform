@@ -30,7 +30,7 @@ export function SubscriptionButton({ isPro = false }: { isPro: boolean }) {
       disabled={loading}
       onClick={onClick}
     >
-      {isPro ? 'Manage Subscription' : 'Upgrade'}
+      {isPro ? 'Gerenciar assinatura' : 'Atualizar'}
       {!isPro && <Zap className="ml-2 h-4 w-4 fill-white" />}
     </Button>
   )
