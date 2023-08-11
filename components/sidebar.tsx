@@ -82,7 +82,7 @@ export function Sidebar({ apiLimitCount = 0, isPro = false }: SidebarProps) {
           </div>
 
           <h1 className={cn('text-2xl font-bold', montserrat.className)}>
-            Genius
+            CaduIA
           </h1>
         </Link>
 

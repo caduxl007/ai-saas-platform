@@ -18,7 +18,7 @@ export function SubscriptionButton({ isPro = false }: { isPro: boolean }) {
 
       window.location.href = response.data.url
     } catch (error) {
-      toast.error('Something went wrong')
+      toast.error('Algo deu errado :(')
     } finally {
       setLoading(false)
     }

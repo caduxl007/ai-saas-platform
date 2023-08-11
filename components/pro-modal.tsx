@@ -31,7 +31,7 @@ export const ProModal = () => {
 
       window.location.href = response.data.url
     } catch (e: any) {
-      toast.error('Something went wrong')
+      toast.error('Algo deu errado :(')
     } finally {
       setIsLoading(false)
     }
@@ -43,7 +43,7 @@ export const ProModal = () => {
         <DialogHeader>
           <DialogTitle className="flex flex-col items-center justify-center gap-y-4 pb-2">
             <div className="flex items-center gap-x-2 text-xl font-bold">
-              Upgrade to Genius
+              Upgrade to CaduIA
               <Badge variant="premium" className="py-1 text-sm uppercase">
                 pro
               </Badge>
